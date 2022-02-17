@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  dev_dc:
+    container_name: code
+    # command: code-server --bind-addr 0.0.0.0:9999 --auth password
+    # build: .
+    image: binacslee/deployment-code-server
+    volumes:
+      # - ./config:/root/.config/code-server:ro
+      # - ./extensions:/root/.local/share/code-server/extensions:ro
+      # - ./settings:/root/.local/share/code-server/User:ro
+      - .:/gitpro
+    ports:
+      - 9999:9999
