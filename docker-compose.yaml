@@ -3,7 +3,7 @@ version: '3.1'
 services:
   dev_dc:
     container_name: code
-    # command: code-server --bind-addr 0.0.0.0:9999 --auth password
+    command: code-server --bind-addr 0.0.0.0:9999 --auth password
     # build: .
     image: binacslee/deployment-code-server
     volumes:
